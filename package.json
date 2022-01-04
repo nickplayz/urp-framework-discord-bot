@@ -1,0 +1,28 @@
+{
+  "name": "discord-framework-bot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon",
+    "start": "ts-node src/app.ts",
+    "build": "tsc",
+    "start-not-ready": "yarn build && node ./dist/app.js",
+    "lint": "eslint ./src --ext .tx"
+  },
+  "dependencies": {
+    "@discordjs/rest": "^0.2.0-canary.0",
+    "discord-api-types": "^0.26.1",
+    "discord.js": "^13.5.0",
+    "dotenv": "^10.0.0",
+    "nodemon": "^2.0.15",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.4",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.9.0",
+    "@typescript-eslint/parser": "^5.9.0",
+    "eslint": "^8.6.0"
+  }
+}
