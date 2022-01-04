@@ -20,7 +20,7 @@ class App {
     public async deployCommands(): Promise<void> {
         this.commands = new Collection();
         const commandFiles = 
-        fs.readdirSync(path.join(process.cwd(), '/app/commands/'), {withFileTypes: true}).filter(file => !file.isDirectory()).map(file => file.name);
+        fs.readdirSync(path.join(__dirname, './app/commands/'), {withFileTypes: true}).filter(file => !file.isDirectory()).map(file => file.name);
         for (const file of commandFiles) {
             const commandName = file.split('.')[0];
             const command = require(`./app/commands/${file}`);
